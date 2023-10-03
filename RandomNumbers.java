@@ -26,7 +26,7 @@ public class RandomNumbers {
         return random.nextInt();
     }
     /**
-     * Returns a random integer x satisfying
+     * Returns a random integer x satisfyingnnj
      * lower <= x <= upper. If lower > upper, returns 0.
      * @param lower
      * @param upper
@@ -59,11 +59,24 @@ public class RandomNumbers {
 
         RandomNumbers rn = new RandomNumbers();
         System.out.println(rn.getRandomInt(100, 500));
-	/*	String s = "hello";
-		char c = s.charAt(0);
-		char d = s.charAt(1);
-		System.out.println(c+" "+d+" "+(char)(c+d));*/
+
+        int randomNumber = getRandomInt(0,2_000_000_000);
+
+        if (randomNumber <= Byte.MAX_VALUE) {
+            System.out.println("Preferred data type: byte");
+        } else if (randomNumber <= Short.MAX_VALUE) {
+            System.out.println("Preferred data type: short");
+        } else if (randomNumber <= Integer.MAX_VALUE) {
+            System.out.println("Preferred data type: int");
+        } else {
+            System.out.println("Preferred data type: long");
+        }
+
+
+        }
+
+
     }
 
 
-}
+
